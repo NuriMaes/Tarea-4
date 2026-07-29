@@ -1,0 +1,98 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  text-align: center;
+  padding-top: 0;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 130px;
+        left: -250px;
+        width: 530px;
+        height: 129px;
+        background-image: url('../../img/lines.svg');
+        background-repeat: no-repeat;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+  &__image {
+    position: relative;
+    width: 174px;
+    margin: 140px auto 40px;
+    //z-index: 2;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -140px;
+      left: 0;
+      width: 100%;
+      height: calc(100% + 140px);
+      background: linear-gradient(to bottom, $black-color 0%, $dark-grey-color 50%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    img {
+      display: block;
+      width: 174px;
+      height: 242px;
+      object-fit: cover;
+      position: relative;
+      z-index: 3;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 250px;
+    right: 0;
+    transform: translateX(50%);
+    width: 128px;
+    height: 129px;
+    background-image: url('../../img/oval.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 2;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 3;
+    padding: 0 16px;
+    margin-bottom: 80px;
+    &-title {
+        color: $white-color;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: -1.14px;
+        margin-bottom: 24px;
+        span {
+            display: inline-block;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: $green-color;
+            }
+        }
+    }
+    &-description {
+        color: $grey-color;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        margin-bottom: 24px;
+    }
+  }
+}

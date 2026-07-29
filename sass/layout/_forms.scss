@@ -1,0 +1,61 @@
+.contact {
+    background-color: $dark-grey-color;
+    padding: 60px 16px 0;
+    margin-bottom: 80px;
+    position: relative;
+    overflow: hidden;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 50px;
+        left: -250px;
+        width: 530px;
+        height: 129px;
+        background-image: url('../../img/lines.svg');
+        background-repeat: no-repeat;
+        pointer-events: none;
+        z-index: 1;
+    }
+    &__text {
+        text-align: center;
+        h3 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 40px;
+            letter-spacing: -1.14px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: $grey-color;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
+            margin-bottom: 50px;
+        }
+    }
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 32px;
+        input, textarea {
+            background-color: $dark-grey-color;
+            border: 0;
+            border-bottom: 1px solid $white-color;
+            padding-left: 24px;
+            padding-bottom: 16px;
+            &::placeholder {
+                font-family: $primary-font;
+                color: $grey-color;
+            }
+        }
+        textarea {
+            height: 100px;
+        }
+    }
+    .btn {
+        align-self: flex-end;
+        background: transparent;
+        border: none;
+    }
+}
