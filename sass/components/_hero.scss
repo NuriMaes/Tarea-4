@@ -24,7 +24,6 @@
     position: relative;
     width: 174px;
     margin: 140px auto 40px;
-    //z-index: 2;
 
     &::before {
       content: '';
@@ -93,6 +92,51 @@
         font-weight: 500;
         line-height: 26px;
         margin-bottom: 24px;
+    }
+  }
+  @include tablet() {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 0;
+    .hero__image {
+      width: 322px;
+      height: 600px;
+      margin: 0;
+      img {
+        width: 349px;
+        height: auto;
+      }
+    }
+    .hero__content {
+      text-align: left;
+      max-width: 445px;
+
+      h1 {
+        font-size: 72px;
+        line-height: 72px;
+      }
+
+      p {
+        margin-bottom: 34px;
+      }
+    }
+  }
+  @include desktop {
+    padding-top: 198px;
+
+    &__image {
+      width: 445px;
+    }
+
+    &__content {
+      max-width: 706px;
+
+      h1 {
+        font-size: 88px;
+        line-height: 88px;
+      }
     }
   }
 }

@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CCS Tarea 4 - Portfolio</title>
+  <title>CSS Task 4 - Adam Keyes Portfolio</title>
   <link rel="stylesheet" href="sass/app.scss">
-  <meta name="description" content="">
+  <meta name="description" content="Adam Keyes, front-end developer portfolio: skills, selected projects and contact details.">
 
   <meta property="og:title" content="">
   <meta property="og:type" content="">
@@ -19,30 +19,30 @@
   <link rel="apple-touch-icon" href="icon.png">
 
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#151515">
 </head>
 
 <body>
-  <div class="black-container">
+  <div class="black-container" id="home">
     <header>
       <a class="header__logo" href="#" aria-label="Inicio"><img src="img/logo.svg" alt="adamkeyes"></a>
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="Social media">
         <ul>
-          <li><a href="#"><img src="img/icon-github.svg" aria-label="Visitar perfil de GitHub" alt=""></a></li>
-          <li><a href="#"><img src="img/icon-frontendmentor.svg" aria-label="Visitar perfil de Frontend Mentor" alt=""></a></li>
-          <li><a href="#"><img src="img/icon-linkedIn.svg" aria-label="Visitar perfil de LinkedIn" alt=""></a></li>
-          <li><a href="#"><img src="img/icon-twitter.svg" aria-label="Visitar perfil de Twitter" alt=""></a></li>
+          <li><a href="#" aria-label="GitHub"><img src="img/icon-github.svg" alt=""></a></li>
+          <li><a href="#" aria-label="Frontend Mentor"><img src="img/icon-frontendmentor.svg" alt=""></a></li>
+          <li><a href="#" aria-label="LinkedIn"><img src="img/icon-linkedIn.svg" alt=""></a></li>
+          <li><a href="#" aria-label="Twitter"><img src="img/icon-twitter.svg" alt=""></a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="hero">
+      <section class="hero" aria-labelledby="hero-title">
         <div class="hero__image">
           <img src="img/man.png" alt="Man">
         </div>
         <div class="hero__content">
-          <h1 class="hero__content-title">
-            Nice to meet you! I'm <span>Adam Keyes.</span>
+          <h1 class="hero__content-title" id="hero-title">
+            Nice to <br class="tablet-break">meet you!<br class="desktop-break"> I'm <br class="tablet-break"><span>Adam Keyes.</span>
           </h1>
           <p class="hero__content-description">
             Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.
@@ -51,31 +51,31 @@
             Contact Me
           </a>
         </div>
-      </div>
-      <div class="languages">
-        <h2>HTML</h2>
-        <P>4 years experience</P>
-      <h2>CSS</h2>
-        <P>4 years experience</P>
-      <h2>Javascript</h2>
-        <P>4 years experience</P>
-      <h2>Accesibility</h2>
-        <P>4 years experience</P>
-      <h2>React</h2>
-        <P>3 years experience</P>
-      <h2>Sass</h2>
-        <P>3 years experience</P>
-      </div>
-      <div class="projects">
+      </section>
+      <section class="languages" aria-label="Experience">
+        <article><h2>HTML</h2><p>4 years experience</p></article>
+        <article><h2>CSS</h2><p>4 years experience</p></article>
+        <article><h2>JavaScript</h2><p>4 years experience</p></article>
+        <article><h2>Accessibility</h2><p>4 years experience</p></article>
+        <article><h2>React</h2><p>3 years experience</p></article>
+        <article><h2>Sass</h2><p>3 years experience</p></article>
+      </section>
+      <section class="projects" aria-labelledby="projects-title">
         <div class="projects__header">
-          <h2>Projects</h2>
+          <h2 id="projects-title">Projects</h2>
           <a href="#" class="btn">
             CONTACT ME
           </a>
         </div>
         <div class="projects__content">
           <article>
-            <a href="#"><img src="img/design-portfolio.jpg" alt="Design Portfolio"></a>
+            <div class="projects__image">
+              <img src="img/design-portfolio.jpg" alt="Design portfolio project preview">
+              <div class="projects__image-links">
+                <a class="btn" href="#">VIEW PROJECT</a>
+                <a class="btn" href="#">VIEW CODE</a>
+              </div>
+            </div>
             <h3>DESIGN PORTFOLIO</h3>
             <p><span>HTML</span><span>CSS</span></p>
             <div class="projects__content-buttons">
@@ -84,7 +84,13 @@
             </div>
           </article>
           <article>
-            <a href="#"><img src="img/e-learning-landing-page.png" alt="E-Learning Landing Page"></a>
+            <div class="projects__image">
+              <img src="img/e-learning-landing-page.png" alt="E-learning landing page project preview">
+              <div class="projects__image-links">
+                <a class="btn" href="#">VIEW PROJECT</a>
+                <a class="btn" href="#">VIEW CODE</a>
+              </div>
+            </div>
             <h3>E-Learning Landing Page</h3>
             <p><span>HTML</span><span>CSS</span></p>
             <div class="projects__content-buttons">
@@ -93,7 +99,13 @@
             </div>
           </article>
           <article>
-            <a href="#"><img src="img/todo-web-app.png" alt="Todo Web App"></a>
+            <div class="projects__image">
+              <img src="img/todo-web-app.png" alt="Todo web app project preview">
+              <div class="projects__image-links">
+                <a class="btn" href="#">VIEW PROJECT</a>
+                <a class="btn" href="#">VIEW CODE</a>
+              </div>
+            </div>
             <h3>Todo Web App</h3>
             <p><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span></p>
             <div class="projects__content-buttons">
@@ -102,7 +114,13 @@
             </div>
           </article>
           <article>
-            <a href="#"><img src="img/entertainment-wep-app.png" alt="Entertainment Web App"></a>
+            <div class="projects__image">
+              <img src="img/entertainment-wep-app.png" alt="Entertainment web app project preview">
+              <div class="projects__image-links">
+                <a class="btn" href="#">VIEW PROJECT</a>
+                <a class="btn" href="#">VIEW CODE</a>
+              </div>
+            </div>
             <h3>Entertainment Web App</h3>
             <p><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span></p>
             <div class="projects__content-buttons">
@@ -111,7 +129,13 @@
             </div>
           </article>
           <article>
-            <a href="#"><img src="img/memory-game.png" alt="Memory Game"></a>
+            <div class="projects__image">
+              <img src="img/memory-game.png" alt="Memory game project preview">
+              <div class="projects__image-links">
+                <a class="btn" href="#">VIEW PROJECT</a>
+                <a class="btn" href="#">VIEW CODE</a>
+              </div>
+            </div>
             <h3>Memory Game</h3>
             <p><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span></p>
             <div class="projects__content-buttons">
@@ -120,7 +144,13 @@
             </div>
           </article>
           <article>
-            <a href="#"><img src="img/art-gallery-showcase.png" alt="Art Gallery Showcase"></a>
+            <div class="projects__image">
+              <img src="img/art-gallery-showcase.png" alt="Art gallery project preview">
+              <div class="projects__image-links">
+                <a class="btn" href="#">VIEW PROJECT</a>
+                <a class="btn" href="#">VIEW CODE</a>
+              </div>
+            </div>
             <h3>Art Gallery Showcase</h3>
             <p><span>HTML</span><span>CSS</span><span>JAVASCRIPT</span></p>
             <div class="projects__content-buttons">
@@ -129,30 +159,34 @@
             </div>
           </article>
         </div>
-      </div>
+      </section>
     </main>
   </div>
   <div class="grey-container">
-    <section class="contact">
+    <section class="contact" aria-labelledby="contact-title">
       <div class="contact__text">
-        <h3>Contact</h3>
+        <h2 id="contact-title">Contact</h2>
         <p>I would love to hear about your project and how I could help. Please fill in the form, and I'll get back to you as soon as possible.</p>
       </div>
-      <form class="contact__inputs" action="" id="contact">
-        <input type="text" placeholder="NAME">
-        <input type="email" placeholder="EMAIL">
-        <textarea name="message" id="message" placeholder="MESSAGE"></textarea>
+      <form class="contact__inputs" action="#contact" id="contact">
+        <label class="sr-only" for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="NAME" autocomplete="name" required>
+        <label class="sr-only" for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="EMAIL" autocomplete="email" required>
+        <span class="contact__error">Sorry, invalid format here</span>
+        <label class="sr-only" for="message">Message</label>
+        <textarea name="message" id="message" placeholder="MESSAGE" required></textarea>
         <button type="submit" class="btn">SEND MESSAGE</button>
       </form>
     </section>
     <footer>
       <a class="footer__logo" href="#" aria-label="Inicio"><img src="img/logo.svg" alt="adamkeyes"></a>
-      <nav class="footer__nav">
+      <nav class="footer__nav" aria-label="Social media">
         <ul>
-          <li><a href="#"><img src="img/icon-github.svg" aria-label="Visitar perfil de GitHub" alt=""></a></li>
-          <li><a href="#"><img src="img/icon-frontendmentor.svg" aria-label="Visitar perfil de Frontend Mentor" alt=""></a></li>
-          <li><a href="#"><img src="img/icon-linkedIn.svg" aria-label="Visitar perfil de LinkedIn" alt=""></a></li>
-          <li><a href="#"><img src="img/icon-twitter.svg" aria-label="Visitar perfil de Twitter" alt=""></a></li>
+          <li><a href="#" aria-label="GitHub"><img src="img/icon-github.svg" alt=""></a></li>
+          <li><a href="#" aria-label="Frontend Mentor"><img src="img/icon-frontendmentor.svg" alt=""></a></li>
+          <li><a href="#" aria-label="LinkedIn"><img src="img/icon-linkedIn.svg" alt=""></a></li>
+          <li><a href="#" aria-label="Twitter"><img src="img/icon-twitter.svg" alt=""></a></li>
         </ul>
       </nav>
     </footer>
